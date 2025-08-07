@@ -1,6 +1,8 @@
 document.getElementById("helloBtn").addEventListener("click", function() {
   alert("Hello, world!");
-  function getJoke() {
+ 
+}
+ function getJoke() {
   fetch("https://official-joke-api.appspot.com/random_joke")
     .then(response => response.json())
     .then(data => {
@@ -11,6 +13,5 @@ document.getElementById("helloBtn").addEventListener("click", function() {
       document.getElementById("joke").textContent = "Oops, couldn't load a joke!";
       console.error("Error fetching joke:", error);
     });
-}
-
 });
+
